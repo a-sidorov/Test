@@ -37,10 +37,6 @@ public class CSVGenerator {
 
 
         final int finalCount = count;
-        list.forEach(strInt -> {
-            System.out.println(
-                    String.format("%s,%d,%d", strInt.getKey(), strInt.getValue(), (strInt.getValue() * 100) / finalCount)
-            );
-        });
+        list.forEach(strInt -> System.out.printf("%s,%d,%d%n", strInt.getKey(), strInt.getValue(), (strInt.getValue() * 100) / finalCount));
     }
 }
