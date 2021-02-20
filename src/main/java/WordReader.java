@@ -1,4 +1,5 @@
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.util.Iterator;
 
 public class WordReader implements Iterator<String>, Closeable {
@@ -10,7 +11,7 @@ public class WordReader implements Iterator<String>, Closeable {
         File file = new File(fileName);
 
 
-        reader = new InputStreamReader(new FileInputStream(file));
+        reader = new InputStreamReader(new FileInputStream(file), StandardCharsets.UTF_8);//Кодировку установим unicode
         if (file.length() > 0) {
             hasNext = true;
         }
