@@ -43,7 +43,6 @@ public class WordReader implements Iterator<String>, Closeable {
                     return builder.toString();
                 }
 
-
             } catch (IOException e) {
                 hasNext = false;
                 return builder.toString();//отдаем что успели считать
